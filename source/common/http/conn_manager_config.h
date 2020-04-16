@@ -420,6 +420,11 @@ public:
   virtual bool shouldMergeSlashes() const PURE;
 
   /**
+   * @return if the HttpConnectionManager should remove ports from Host/authority header
+   */
+  virtual bool shouldRemovePorts() const PURE;
+
+  /**
    * @return the action HttpConnectionManager should take when receiving client request
    * headers containing underscore characters.
    */

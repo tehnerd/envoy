@@ -214,7 +214,7 @@ HttpConnectionManagerConfig::HttpConnectionManagerConfig(
           context.runtime().snapshot().featureEnabled("http_connection_manager.normalize_path",
                                                       0))),
 #endif
-      merge_slashes_(config.merge_slashes()),
+      merge_slashes_(config.merge_slashes()), remove_ports_(config.remove_ports()),
       headers_with_underscores_action_(
           config.common_http_protocol_options().headers_with_underscores_action()) {
   // If idle_timeout_ was not configured in common_http_protocol_options, use value in deprecated
